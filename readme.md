@@ -36,7 +36,7 @@ mvn jlink:jlink
 ./target/app-image/bin/clock
 
 ## 📁 Project Structure
-
+```
 src/
 └── main/
     ├── java/
@@ -44,6 +44,7 @@ src/
     ├── resources/
     │   └── background.png (optional)
 pom.xml
+```
 
 ## 🚀 Distribution
 
@@ -56,7 +57,55 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👤 Author
 
-Created by [Toshiaki Shioya @ aioidgt.co.jp]
-E-mail t-shioya@aioidgt.co.jp
-GitHub: https://github.com/yourusername
+Created by [Toshiaki Shioya @ aioidgt.co.jp]<br>
+E-mail t-shioya@aioidgt.co.jp<br>
+GitHub: https://github.com/yourusername<br>
+
+# 🛠 Installation Instructions (with JavaFX)
+
+To run this application, you need to have a Java environment with JavaFX installed. Follow the steps below according to your OS.
+### 1. Install JDK (Java Development Kit)
+
+Download and install JDK 17 or later if not already installed.
+
+Verify installation:
+
+```
+java -version
+javac -version
+```
+
+### 2. Install JavaFX SDK
+
+Download JavaFX SDK from https://gluonhq.com/products/javafx/, and unzip it to a known location.
+### 3. Set Environment Variables (Optional but recommended)
+
+Add the JavaFX SDK lib path to an environment variable for convenience. For example:
+
+    Windows:
+
+        Set PATH_TO_FX:
+        C:\javafx-sdk-21\lib
+
+    macOS / Linux:
+
+        Add to ~/.bashrc or ~/.zshrc:
+
+        export PATH_TO_FX=/path/to/javafx-sdk-21/lib
+
+### 4. Run the Application with JavaFX Modules
+
+When running from the terminal:
+
+java --module-path $PATH_TO_FX --add-modules javafx.controls,javafx.graphics -jar your-app.jar
+
+    Replace your-app.jar with the name of your compiled JAR file.
+
+### 5. Optional: Run with Maven
+
+If using Maven, JavaFX dependencies will be resolved automatically. To run the app:
+
+mvn javafx:run
+
+Make sure pom.xml includes the correct JavaFX dependencies and plugin configuration.
 
