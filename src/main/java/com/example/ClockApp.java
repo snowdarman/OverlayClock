@@ -54,11 +54,11 @@ public class ClockApp extends Application {
     @Override
     public void start(Stage stage) {
         Label clockLabel = new Label();
-        clockLabel.setFont(Font.font("Monospace", 48));
+        clockLabel.setFont(Font.font("Consolas, DejaVu Sans Mono, Monospaced", 48));
         Label dateLabel = new Label();
-        dateLabel.setFont(Font.font("Monospace", 24));
+        dateLabel.setFont(Font.font("Consolas, DejaVu Sans Mono, Monospaced", 24));
         Label commentLabel = new Label();
-        commentLabel.setFont(Font.font("Monospace", 24));
+        commentLabel.setFont(Font.font("Consolas, DejaVu Sans Mono, Monospaced", 24));
         commentLabel.setTextFill(Color.RED);  // ← ここで文字色を赤に
 
         
@@ -101,9 +101,13 @@ public class ClockApp extends Application {
         ContextMenu contextMenu = new ContextMenu();
         MenuItem exitItem = new MenuItem("終了");
         exitItem.setOnAction(e -> Platform.exit());
+        MenuItem clearAlarmItem  = new MenuItem("アラーム表示の消去");
+        clearAlarmItem .setOnAction(e -> {
+            ClockApp.alarmSelect = null;
+        });
         MenuItem settingsItem = new MenuItem("設定");
         settingsItem.setOnAction(e -> SetComment(stage));
-        contextMenu.getItems().addAll(settingsItem, exitItem);
+        contextMenu.getItems().addAll(settingsItem, clearAlarmItem, exitItem);
         // ラベルに右クリックイベント追加
         vbox.setOnContextMenuRequested(event ->
             contextMenu.show(vbox, event.getScreenX(), event.getScreenY())

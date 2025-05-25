@@ -12,8 +12,24 @@ It displays the current time (including seconds) and date (with weekday), and al
 - **Always on top**
 - **Frameless** and draggable window
 - Right-click menu with **Exit**
+- **Alarm support** with time + comment
+- Load alarms from text file (with `hh:mm | comment` format)
+- Highlight upcoming alarms 3 minutes before
 - Custom background image support (optional)
 - Packaged using **jlink** (custom runtime included)
+
+## ⏰ Alarm Feature
+
+You can manage a list of alarms using the **Settings** dialog.  
+Each alarm consists of a time (`hh:mm`) and a comment. The clock will monitor upcoming alarms and show the relevant comment **3 minutes before** the scheduled time.
+
+### � Alarm File Format
+
+You can load alarms from a `.txt` file using the “Browse” button in the settings dialog.
+
+- One alarm per line
+- Use `|` (pipe) or `｜` (full-width pipe) to separate time and comment
+- Format:  
 
 ## 🛠 Requirements
 
