@@ -3,6 +3,8 @@
 A simple always-on-top clock application built with JavaFX.  
 It displays the current time (including seconds) and date (with weekday), and allows window dragging without a title bar.
 
+[readme in japanese](readmeJ.md)
+
 ![screenshot](screenshot.png)
 
 ## ✨ Features
