@@ -1,0 +1,31 @@
+# === OS依存の一時ファイル ===
+.DS_Store
+Thumbs.db
+
+# === Java/コンパイルファイル ===
+*.class
+*.log
+
+# === Mavenのビルド成果物 ===
+/target/
+
+# === Eclipse関連 ===
+*.launch
+.classpath
+.project
+.settings/
+
+# === IDEによるワークスペース構成 ===
+/bin/
+/build/
+
+# === VSCodeを併用する場合 ===
+.vscode/
+
+# === JavaFXランタイムの生成物（jlink出力） ===
+/app/
+/app-image/
+/custom-runtime/
+
+# === その他のキャッシュや一時ファイル ===
+/tmp/
